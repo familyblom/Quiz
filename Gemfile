@@ -10,6 +10,15 @@ gem 'sqlite3'
 
 # Gems used only for assets and not required
 # in production environments by default.
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'xray-rails'
+  gem 'meta_request'
+  gem 'pry-rails'
+end
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
