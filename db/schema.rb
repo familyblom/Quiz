@@ -11,15 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140205174054) do
+ActiveRecord::Schema.define(:version => 20140205183644) do
 
   create_table "schools", :force => true do |t|
     t.string   "title"
-    t.integer  "left_operand"
+    t.decimal  "left_operand"
     t.string   "operator"
-    t.integer  "right_operand"
+    t.decimal  "right_operand"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "take_quizzes", :force => true do |t|
+    t.integer  "answer"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

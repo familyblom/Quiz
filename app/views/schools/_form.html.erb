@@ -17,15 +17,15 @@
   </div>
   <div class="field">
     <%= f.label :left_operand %><br />
-    <%= f.number_field :left_operand %>
+    <%= f.number_field :left_operand, :type => 'float'%>
   </div>
   <div class="field">
     <%= f.label :operator %><br />
-    <%= f.select :operator, options_for_select([["+", "+"], ["-", "-"], ["*", "*"]]) %>
+    <%= f.select :operator, options_for_select([["+", "+"], ["-", "-"], ["*", "*"], ["/", "/"]]) %>
   </div>
   <div class="field">
     <%= f.label :right_operand %><br />
-    <%= f.number_field :right_operand %>
+    <%= f.number_field :right_operand, :type => 'float' %>
   </div>
   <div class="actions">
     <%= f.submit %>
