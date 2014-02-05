@@ -1,5 +1,5 @@
 Quiz::Application.routes.draw do
-  get "static/home"
+  root to: "Static#home"
 
   get "static/about_us"
 

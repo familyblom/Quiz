@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :operator %><br />
-    <%= f.text_field :operator %>
+    <%= f.select :operator, options_for_select([["+", "+"], ["-", "-"], ["*", "*"], ["/", ["/"]]]) %>
   </div>
   <div class="field">
     <%= f.label :right_operand %><br />
