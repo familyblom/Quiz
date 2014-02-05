@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @school.title %>
+</p>
+
+<p>
+  <b>Left operand:</b>
+  <%= @school.left_operand %>
+</p>
+
+<p>
+  <b>Operator:</b>
+  <%= @school.operator %>
+</p>
+
+<p>
+  <b>Right operand:</b>
+  <%= @school.right_operand %>
+</p>
+
+
+<%= link_to 'Edit', edit_school_path(@school) %> |
+<%= link_to 'Back', schools_path %>

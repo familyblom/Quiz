@@ -1,4 +1,11 @@
 Quiz::Application.routes.draw do
+  get "static/home"
+
+  get "static/about_us"
+
+  resources :schools
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
