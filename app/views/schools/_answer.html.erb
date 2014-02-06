@@ -1,0 +1,23 @@
+<%= form_for(@TakeQuiz, url: school_answer_path(@school), method: :post) do |f| %>
+  <% if @TakeQuiz.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@TakeQuiz.errors.count, "error") %> prohibited this TakeQuiz from being saved:</h2>
+
+      <ul>
+      <% @TakeQuiz.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :answer %><br />
+    <%= f.number_field :answer, :type => 'float'%>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

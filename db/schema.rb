@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20140205183644) do
 
   create_table "take_quizzes", :force => true do |t|
     t.integer  "answer"
+    t.integer  "school_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

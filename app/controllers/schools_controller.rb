@@ -14,7 +14,7 @@ class SchoolsController < ApplicationController
   # GET /schools/1.json
   def show
     @school = School.find(params[:id])
-
+    @TakeQuiz = @school.take_quizzes.new
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @school }
@@ -80,4 +80,20 @@ class SchoolsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def check_answer
+    @school = School.find(params[:school_id])
+    @TakeQuiz = @school.take_quizzes.new(params[:take_quiz])
+    respond_to do |format|
+      if @school.update_attributes(params[:school])
+        format.html { redirect_to @school, notice: 'School was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @school.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
 end

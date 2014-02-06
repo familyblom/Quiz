@@ -3,8 +3,12 @@ Quiz::Application.routes.draw do
 
   get "static/about_us"
 
-  resources :schools
+  #post "/answer", to: "take_quiz#create"
 
+
+  resources :schools do
+    post "/answer", to: "schools#check_answer"
+end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
