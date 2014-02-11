@@ -11,21 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :left_operand %><br />
-    <%= f.number_field :left_operand, :type => 'float'%>
+    <%= f.number_field :left_operand, :type => 'float', class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :operator %><br />
-    <%= f.select :operator, options_for_select([["+", "+"], ["-", "-"], ["x", "*"], ["/", "/"]]) %>
+    <%= f.select :operator, options_for_select([["+", "+"], ["-", "-"], ["x", "*"], ["/", "/"]]), class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :right_operand %><br />
-    <%= f.number_field :right_operand, :type => 'float' %>
+    <%= f.number_field :right_operand, :type => 'float', class: "form-control" %>
   </div>
   <div class="actions">
     <%= f.submit %>

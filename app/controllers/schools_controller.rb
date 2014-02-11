@@ -84,11 +84,14 @@ class SchoolsController < ApplicationController
 
   def check_answer
     @school = School.find(params[:school_id])
-    @TakeQuiz = @school.take_quizzes.new(params[:take_quiz])
+    @take_quiz = @school.take_quizzes.new(params[:take_quiz])
+     unless @school.result.to_f == @take_quiz.answer.to_f
+        return redirect_to school_path(params[:school_id]), notice: "Not the correct answer, try again"
+     end
 
     respond_to do |format|
       if @school.update_attributes(params[:school])
-        format.html { redirect_to @school, notice: 'School was successfully updated.' }
+        format.html { redirect_to @school, notice: 'Your answer was correct. Hooray!' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

@@ -1,0 +1,19 @@
+// default color palette
+
+$primary_color: #92AFC1;
+$secondary_color: #496D8B;
+$tertiery_color: #F1BD9B;
+$fourth_color: #BC4C2E;
+$fifth_color: #8C3F2C;
+$text-color: #fff;
+$text_hover_color: #dcf2ff;
+
+form {
+  width: 250px;
+}
+
+@import "sitewide";
+@import "scaffolds";
+@import "static";
+@import "schools";
+@import "bootstrap_style";
