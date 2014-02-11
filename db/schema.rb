@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20140205183644) do
     t.decimal  "left_operand"
     t.string   "operator"
     t.decimal  "right_operand"
+    t.decimal  "result"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end

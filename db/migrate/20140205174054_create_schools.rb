@@ -5,6 +5,7 @@ class CreateSchools < ActiveRecord::Migration
       t.decimal :left_operand
       t.string :operator
       t.decimal :right_operand
+      t.decimal :result
 
       t.timestamps
     end
