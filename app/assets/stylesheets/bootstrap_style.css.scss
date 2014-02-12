@@ -4,10 +4,23 @@ $navbar-default-color: $text-color;
 $navbar-default-bg: $secondary_color;
 $navbar-default-link-color: $text-color;
 $navbar-default-link-hover-color: $text_hover_color;
-$body-bg: $fifth_color;
+// $body-bg: $fifth_color;
 $table-bg: #ddebfc;
 $table-cell-padding: 20px;
 $table-bg-hover: #f9f9f9;
 $input-color: #000;
 
-@import 'bootstrap'
+@import 'bootstrap';
+
+
+
+.home-image{
+  background: image-url("51H.jpg") center center;
+  // height: 20%; 
+  // width: 100%;
+
+}
+
+.info-image{
+  
+}
