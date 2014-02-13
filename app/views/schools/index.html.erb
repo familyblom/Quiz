@@ -1,29 +1,36 @@
-<h1>Available Quizzes</h1>
+<body class="index_img">  
+  <h1 class="index_page_title">Available Math Quizzes</h1>
+    <div class="container">
+    <table class= 'table-hover table-bordered table-striped table-responsive table-condensed' class='table table-nonfluid'>
+      <tr class="success">
+        <div class="row">
+          <th class="col-sm-6">Title</th>
+          <th class="col-sm-1">Left operand</th>
+          <th class="col-sm-1">Operator</th>
+          <th class="col-sm-1">Right operand</th>
+          <th class="col-sm-1">Actions</th>
+      </tr>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Left operand</th>
-    <th>Operator</th>
-    <th>Right operand</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+      <% @schools.each do |school| %>
+      <tr>
+          <td><%= link_to school.title, school %></td>
+          <td><%= school.left_operand %></td>
+          <td><%= school.operator %></td>
+          <td><%= school.right_operand %></td>
+          <td class='center_table'> 
+            <div class="btn-group btn-group-xs">
+              <%= link_to '<span class="glyphicon glyphicon-pencil"></span>'.html_safe, edit_school_path(school), class: 'btn btn-info' %>
+              <%= link_to school, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" do%>
+                <span class='glyphicon glyphicon-trash'></span>
+                <% end %>
+            </div>
+         </td>
+      </tr>
+      <% end %>
+    </table>
 
-<% @schools.each do |school| %>
-  <tr>
-    <td><%= school.title %></td>
-    <td><%= school.left_operand %></td>
-    <td><%= school.operator %></td>
-    <td><%= school.right_operand %></td>
-    <td><%= link_to 'Show', school %></td>
-    <td><%= link_to 'Edit', edit_school_path(school) %></td>
-    <td><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    <br />
 
-<br />
-
-<%= link_to 'New School', new_school_path %>
+    <%= link_to 'New Quiz', new_school_path %>
+  </div>
+</body>

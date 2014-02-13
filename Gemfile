@@ -17,6 +17,11 @@ group :development do
   gem 'xray-rails'
   gem 'meta_request'
   gem 'pry-rails'
+  gem 'rack-livereload'
+  gem 'guard'
+  gem 'guard-livereload'
+  gem 'guard-pow', require: false
+  gem 'ruby_gntp'
 end
 
 group :assets do

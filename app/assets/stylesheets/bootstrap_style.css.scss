@@ -1,14 +1,14 @@
 // Bootstrap overrides
 
-$navbar-default-color: $text-color;
+$navbar-default-color: $text-color-white;
 $navbar-default-bg: $secondary_color;
-$navbar-default-link-color: $text-color;
+$navbar-default-link-color: $text-color-white;
 $navbar-default-link-hover-color: $text_hover_color;
 // $body-bg: $fifth_color;
 $table-bg: #ddebfc;
 $table-cell-padding: 20px;
-$table-bg-hover: #f9f9f9;
-$input-color: #000;
+$table-bg-hover: $tertiery_color;
+$table-condensed-cell-padding: 3px;
 
 @import 'bootstrap';
 
@@ -16,10 +16,8 @@ $input-color: #000;
 
 .home-image{
   background: image-url("bridge.gif") no-repeat center center fixed;
-  
 }
 
-.info-image{
-  
+.index_img{
+  background: image-url("bridge_crop.gif") no-repeat center center fixed;
 }
-
